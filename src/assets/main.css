@@ -2,4 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+    background-color: #1e1e1e;
+    color: #fff;
+    height: 100%;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
