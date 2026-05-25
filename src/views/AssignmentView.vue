@@ -1,0 +1,5 @@
+<script setup></script>
+
+<template>
+        <h1>Info</h1>
+</template>
