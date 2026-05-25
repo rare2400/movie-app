@@ -52,13 +52,23 @@ header {
     font-size: 0.9em;
 }
 
-.nav-links ul li a {
+.nav-links a {
     color: #fff;
     text-decoration: none;
-    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    background-color: #505050;
 }
 
 @media screen and (min-width: 700px) {
+    .container {
+        max-width: 1220px;
+        margin: 0 auto;
+    }
+
     .logo {
         font-size: 2rem;
     }
