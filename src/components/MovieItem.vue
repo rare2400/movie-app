@@ -24,6 +24,22 @@ const emits = defineEmits(["deleteMovie"]);
 </script>
 
 <style scoped>
+td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+    background-color: #cccccc28;
+}
+
+.title {
+    max-width: 230px;
+}
+
+.status {
+    display: none;
+}
 
 .badge {
     padding: 0.2em 0.5em;
