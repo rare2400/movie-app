@@ -29,6 +29,7 @@
 <script setup>
 import { ref } from 'vue';
 
+// movie object with default values
 const movie = ref({
     title: "",
     year: null,
@@ -37,12 +38,16 @@ const movie = ref({
     watched: false
 });
 
+// error message
 const error = ref("");
 
+// event emitter to notify parent component to refresh movie list
 const emits = defineEmits(["refreshMovieList"]);
 
+// function to add a new movie
 const addMovie = async () => {
 
+    // validation checks for movie data
     if (!movie.value.title.trim()) {
         error.value = "Titel obligatorisk.";
         return;
@@ -58,17 +63,35 @@ const addMovie = async () => {
         return;
     }
 
+    // handle rating input, allowing it to be optional
+    let rating = movie.value.rating;
+
+    if (rating === "" || rating === undefined) {
+        rating = null;
+    }
+
+    if(rating !== null) {
+        rating = Number(rating)
+    }
+
+    if (rating !== null && (rating <= 0 || rating > 10)) {
+        error.value = "Betyg måste vara från 1 till 10 eller lämnas tomt.";
+        return;
+    }
+
     error.value = "";
 
+    // prepare data to be sent to the API
     const data = {
         title: movie.value.title,
         year: movie.value.year,
         length: movie.value.length,
-        rating: movie.value.rating,
+        rating: rating,
         watched: movie.value.watched
     };
 
     try {
+        // send POST request to API to add new movie
         const res = await fetch('https://fastify-movieapi.onrender.com/movies', {
             method: "POST",
             headers: {
@@ -77,6 +100,7 @@ const addMovie = async () => {
             body: JSON.stringify(data)
         });
 
+        // if successful, emit event to refresh movie list and reset form
         if (res.ok) {
             emits("refreshMovieList");
 
@@ -105,6 +129,7 @@ const addMovie = async () => {
     text-align: center;
 }
 
+/* form styling */
 form {
     display: flex;
     flex-direction: column;
@@ -154,6 +179,7 @@ form input[type="submit"]:hover {
     border-color: #ccc;
 }
 
+/* wider screen styling */
 @media screen and (min-width: 700px) {
     form {
         max-width: 500px;
