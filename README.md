@@ -2,6 +2,8 @@
 
 Detta är en Single Page Application (SPA) byggd med vue.js. Applikationen hanterar en lista av filmer genom att hämta, lägga till och radera data via ett API. 
 
+[Länk till publicerad applikation](https://movie-app-s2xv.vercel.app/)
+
 ## Verktyg
 - Vue.js (CLI med Vite)
 - Vue Router
