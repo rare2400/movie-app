@@ -1,38 +1,63 @@
 # movie-app
 
-This template should help get you started developing with Vue 3 in Vite.
+Detta är en Single Page Application (SPA) byggd med vue.js. Applikaitonen hanterar en lista av filmer genom att hämta, lägga till och radera data via ett API. 
 
-## Recommended IDE Setup
+## Verktyg
+- Vue.js (CLI med Vite)
+- Vue Router
+- JavaScript
+- Fetch API
+- HTML & CSS (inkl. komponentbaserad CSS)
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Funktionalitet
+- Visa filmer från ett API (GET)
+- Lägga till nya filmer (POST)
+- Radera filmer (DELETE)
+- Responsiv design
+- Dynamisk rendering med Vue.js
 
-## Recommended Browser Setup
+## Projektstruktur
+```
+src/
+├── components/       - HomeView, MovieListView, AssignmentView
+├── views/            - Header, Footerm MovieItem, AddMovie
+├── router/           - Routing
+└── assets/           - Bilder & global css
+```
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## API
+[Länk till API som applikationen använder](https://fastify-movieapi.onrender.com/movies)
 
-## Customize configuration
+[Länk till APIets github repo](https://github.com/rare2400/fastify-movieAPI.git)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Installation
+1. Klona repo:
 
-## Project Setup
+```sh
+npm git clone https://github.com/rare2400/movie-app.git
+```
+
+2. Installera dependencies
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+3. Starta utvecklingsserver
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+4. Kompilera och minifiera för produktion
 
 ```sh
 npm run build
 ```
+
+## Skapad av
+Skapad som en del av en skoluppgift   
+Mittuniversitetet, Webbutvecklingsprogrammet    
+Ramona Reinholdz   
+[rare2400@student.miun.se](rare2400@student.miun.se)      
+2026-05-26
