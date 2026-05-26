@@ -16,14 +16,17 @@
 </template>
 
 <script setup>
+// props to receive movie data from parent component
 const props = defineProps({
     movie: Object
 });
 
+// emit to notify parent component to delete a movie by ID
 const emits = defineEmits(["deleteMovie"]);
 </script>
 
 <style scoped>
+/* table styles */
 td {
     padding: 0.75rem;
     border-bottom: 1px solid #eee;
@@ -37,10 +40,7 @@ tr:hover {
     max-width: 230px;
 }
 
-.status {
-    display: none;
-}
-
+/* status badge - green if seen, red if not seen */
 .badge {
     padding: 0.2em 0.5em;
     border-radius: 4px;
@@ -59,7 +59,7 @@ tr:hover {
     font-weight: bold;
 }
 
-/* Knapp */
+/* button */
 button {
     padding: 0.3rem 0.6rem;
     border: none;
@@ -73,17 +73,23 @@ button:hover {
     background: #c0392b;
 }
 
-/* Dölj på små skärmar */
+/* hide status, length and rating on small screens */
+.status {
+    display: none;
+}
+
 .hide-mobile {
     display: none;
 }
 
+/* display status on medium screens and up */
 @media screen and (min-width: 500px){
     .status {
         display: table-cell;
     }
 }
 
+/* show length and rating on larger screens */
 @media screen and (min-width: 700px) {
     .hide-mobile {
         display: table-cell;
