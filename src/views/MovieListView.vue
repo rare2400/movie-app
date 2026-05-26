@@ -30,7 +30,7 @@
 
 <script setup>
 import MovieItem from '@/components/MovieItem.vue';
-import AddMovie from '@/components/addMovie.vue';
+import AddMovie from '@/components/AddMovie.vue';
 import { ref, onMounted } from 'vue';
 
 const movies = ref([]);
@@ -126,7 +126,7 @@ th {
     }
 
     .table-container {
-        max-width: 800px;
+        max-width: 900px;
         margin: 2rem auto;
     }
 }
