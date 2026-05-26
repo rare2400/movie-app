@@ -21,7 +21,8 @@
         </p>
 
         <p>
-            På den här sidan samlar jag filmer jag har sett eller vill se, och håller koll på mina favoriter. Det
+            På den här sidan samlar jag filmer jag har sett eller vill se, och håller koll på mina favoriter. De satta
+            betygen är helt mina egna och har jag inte sett en film, kan jag inte sätta ett betyg. Det
             fungerar som ett sätt att strukturera mitt filmintresse och ger mig en tydlig överblick, samtidigt som det
             gör det enklare att upptäcka nya filmer längs vägen.
         </p>
