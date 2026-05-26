@@ -1,6 +1,6 @@
 <template>
     <form @submit.prevent="addMovie">
-        <h2>Lägg till film</h2>
+        <h3>Lägg till film</h3>
         <p class="error" v-if="error">{{ error }}</p>
         <label for="title">Titel*</label>
         <input type="text" id="title" name="title" v-model="movie.title" placeholder="Filmens titel">
