@@ -1,6 +1,6 @@
-# movie-app
+# Filmlistan - vue.js
 
-Detta är en Single Page Application (SPA) byggd med vue.js. Applikaitonen hanterar en lista av filmer genom att hämta, lägga till och radera data via ett API. 
+Detta är en Single Page Application (SPA) byggd med vue.js. Applikationen hanterar en lista av filmer genom att hämta, lägga till och radera data via ett API. 
 
 ## Verktyg
 - Vue.js (CLI med Vite)
@@ -28,13 +28,13 @@ src/
 ## API
 [Länk till API som applikationen använder](https://fastify-movieapi.onrender.com/movies)
 
-[Länk till APIets github repo](https://github.com/rare2400/fastify-movieAPI.git)
+APIets github repo: [https://github.com/rare2400/fastify-movieAPI.git](https://github.com/rare2400/fastify-movieAPI.git)
 
 ## Installation
 1. Klona repo:
 
 ```sh
-npm git clone https://github.com/rare2400/movie-app.git
+git clone https://github.com/rare2400/movie-app.git
 ```
 
 2. Installera dependencies
