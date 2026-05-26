@@ -42,8 +42,19 @@ const error = ref("");
 const emits = defineEmits(["refreshMovieList"]);
 
 const addMovie = async () => {
-    if (!movie.value.title || !movie.value.year || !movie.value.length) {
-        error.value = "Titel, år och längd är obligatoriska.";
+
+    if (!movie.value.title.trim()) {
+        error.value = "Titel obligatorisk.";
+        return;
+    }
+
+    if (!movie.value.year || movie.value.year < 1888 || movie.value.year > new Date().getFullYear()) {
+        error.value = "Ange ett giltigt år.";
+        return;
+    }
+
+    if (!movie.value.length || movie.value.length <= 0) {
+        error.value = "Längd måste vara större än 0.";
         return;
     }
 
